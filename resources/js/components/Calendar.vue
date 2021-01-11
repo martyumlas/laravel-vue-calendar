@@ -1,12 +1,23 @@
 <template>
-<v-container>
+ <div>
+    <div class="container">
+        <h1>Calendar</h1>
+    </div>
+    
+    <hr>
+
+    <v-container>
+
     <v-row class="fill-height">
+
       <Alert/>
       <CalendarInput/>
       <!-- <CalendarEvents/> -->
       <FullCalendar/>
   </v-row>
 </v-container>
+
+  </div>
 
 </template>
 <script>
