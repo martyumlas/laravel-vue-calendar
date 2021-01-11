@@ -18,6 +18,10 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@fullcalendar/daygrid": "^5.5.0",
+        "@fullcalendar/interaction": "^5.5.0",
+        "@fullcalendar/vue": "^5.5.0",
+        "moment": "^2.29.1",
         "vue": "^2.6.12",
         "vue-router": "^3.4.9",
         "vue-textarea-autosize": "^1.1.1",

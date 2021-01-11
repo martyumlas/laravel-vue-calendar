@@ -15,14 +15,19 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
-        // $data = $request->only('name', 'start', 'end');
-        // $data['days'] = json_encode($request->days);
         $event = Event::updateOrCreate(['id' => $request->id],[
-            'name' => $request->name,
+            'title' => $request->title,
             'start' => $request->start,
             'end' => $request->end,
             'color' => $request->color,
+            'days' => json_encode($request->days)
         ]);
-        return response()->json($event);
+        return response()->json(['success' => 'Event Saved']);
+    }
+
+    public function deleteAll()
+    {
+        Event::truncate();
+        return response()->json(['success' => 'Event Deleted']);
     }
 }
